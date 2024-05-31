@@ -1,32 +1,31 @@
-const precio = 400000
+const price = 400000
 let startingQuantity = 0
 let startingPrice = 0
 
-const precioProd = document.querySelector('#startingPrice')
+prodPrice = document.querySelector('#startingPrice')
+totalValue = document.querySelector('#totalValue')
+amount = document.querySelector('#itemAmount')
+addBtn = document.querySelector('#add')
+substractBtn = document.querySelector('#substract')
 
-const totalValue = document.querySelector('#totalValue')
-
-const amount = document.querySelector('#itemAmount')
-
-const botonSuma = document.querySelector('#add')
-
-const botonResta = document.querySelector('#substract')
-
-precioProd.innerHTML = precio
+prodPrice.innerHTML = price
 amount.innerHTML = startingQuantity
 totalValue.innerHTML = startingPrice
 
 add.addEventListener('click', () => {
     startingQuantity = startingQuantity + 1
     amount.innerHTML = startingQuantity
-    totalValue.innerHTML = precio * startingQuantity
+    totalValue.innerHTML = price * startingQuantity
 })
 
 substract.addEventListener('click', () => {
     if (startingQuantity > 0) {
     startingQuantity = startingQuantity - 1
     amount.innerHTML = startingQuantity
-    totalValue.innerHTML = precio * startingQuantity
+    totalValue.innerHTML = price * startingQuantity
+    }
+    else {
+        alert("no se pueden ingresar cantidades menores a 0")
     }
 })
 
