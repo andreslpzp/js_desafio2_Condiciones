@@ -5,29 +5,107 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafío 1 - JavaScript</title>
+    <title>Desafío 2 - Condiciones</title>
     <link rel="stylesheet" href="/estilos.css">
 </head>
 
 <body>
-
-    <section>
-        <div class="card">
-            <div class="img-card"></div>
-                <h6>Laptop Gamer AMD</h6>
-                <p>Precio base: $<span id="startingPrice"></span></p>
-        
-                <p>Cantidad:
-                    <span id="itemAmount">0</span>
-                    <button id="add">+</button>
-                    <button id="substract">-</button>
-                </p>
-        </div>
+    <h2>Pregunta 1</h2>
+    <section id="pregunta_1">
+        <section>
+            <div id="container_1" class="red_border">
+                <img src="/assets/Miro-Logo.png" alt=""> 
+            </div>
+        </section>
     </section>
+    <h2>Pregunta 2</h2>
+    <section id="pregunta_2">
+        <section id="box">
+            <div class="img-card">
+                <img src="/assets/reddit_sticker.jpeg" alt="">
+            </div>
+            <div>
+                <h4 class="titulo_card">¿Cuántos stickers quieres?</h4>
+            </div>
+            <div>
+                <p>Cantidad:
+                    <span id="quantity_1"><input type="integer"></span>
+                </p>
+            </div>
+        </section>
+        <section id="box">
+            <div class="img-card">
+                <img src="/assets/slack_sticker.jpeg" alt="">
+            </div>
+            <div>
+                <h4 class="titulo_card">¿Cuántos stickers quieres?</h4>
+            </div>
+            <div>
+                <p>Cantidad:
+                    <span id="quantity_2"><input type="integer"></span>
+                </p>
+            </div>
+        </section>
+        <section id="box">
+            <div class="img-card">
+                <img src="/assets/9gag_sticker.jpeg" alt="">
+            </div>
+            <div>
+                <h4 class="titulo_card">¿Cuántos stickers quieres?</h4>
+            </div>
+            <div>
+                <p>Cantidad:
+                    <span id="quantity_3"><input type="integer"></span>
+                </p>
+            </div>
+        </section>
+    </section>
+    <section id="total">
+        <h4>Llevas un total de</h4>
+        <p><span id="total_stickers"></span></p>
+        <h4>stickers.</h4>
+    </section>
+    <h2>Pregunta 3</h2>
+    <section id="pregunta_3">
+        <select id="select1">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select>
+        <select id="select2">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select>
+        <select id="select3">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select>
 
-    <div class="total-section">
-        <p>Total a pagar: $<span id="totalValue"></span> </p>
-    </div>
+        <button id="btn">Ingresar</button>
+
+        <p id="msg"></p>
+
+    </section>
 
     <script src="/index.js">
 
