@@ -1,11 +1,9 @@
+//Pregunta 1
 
 document.addEventListener('DOMContentLoaded', (event) => {
-    // Get the image element
     const image = document.querySelector('#container_1 img');
 
-    // Add an event listener to the image
     image.addEventListener('click', () => {
-        // Toggle the red_border class on the container
         const container = document.getElementById('container_1');
         container.classList.toggle('red_border');
     });
@@ -43,8 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
-
-
 
 
 //Pregunta 3
