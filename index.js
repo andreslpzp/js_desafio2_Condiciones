@@ -1,4 +1,3 @@
-//pregunta 1 pista: guardar si tiene una variable o no
 
 document.addEventListener('DOMContentLoaded', (event) => {
     // Get the image element
@@ -14,73 +13,51 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 //Pregunta 2
 
-//Método 1 con restricción de cantidades negativas
 
-document.addEventListener('DOMContentLoaded', (event) => {
-  // Get references to the input elements
-  const input1 = document.querySelector('#quantity_1 input');
-  const input2 = document.querySelector('#quantity_2 input');
-  const input3 = document.querySelector('#quantity_3 input');
-  const totalStickersElement = document.getElementById('total_stickers');
+document.addEventListener('DOMContentLoaded', () => {
+    const inputs = document.querySelectorAll('input[type="number"]');
+    const totalStickersSpan = document.getElementById('total_stickers');
+    const totalText1 = document.getElementById('total_text_1');
+    const totalText2 = document.getElementById('total_text_2');
 
-  // Function to update the total stickers
-  function updateTotal() {
-      // Parse the input values as integers
-      let value1 = parseInt(input1.value) || 0;
-      let value2 = parseInt(input2.value) || 0;
-      let value3 = parseInt(input3.value) || 0;
+    inputs.forEach(input => {
+        input.addEventListener('input', updateTotal);
+    });
 
-      // Ensure values are not negative
-      if (value1 < 0) value1 = 0;
-      if (value2 < 0) value2 = 0;
-      if (value3 < 0) value3 = 0;
+    function updateTotal() {
+        let total = 0;
+        inputs.forEach(input => {
+            let value = parseInt(input.value) || 0;
+            if (value < 0) value = 0; 
+            total += value;
+        });
 
-      // Calculate the total
-      const total = value1 + value2 + value3;
-
-      // Update the total_stickers element
-      if (total > 10) {
-          totalStickersElement.textContent = 'Llevas demasiados stickers';
-      } else {
-          totalStickersElement.textContent = total;
-      }
-  }
-
-  // Prevent negative input
-  function preventNegativeInput(event) {
-      if (event.target.value < 0) {
-          event.target.value = 0;
-      }
-  }
-
-  // Add event listeners to update the total when inputs change
-  input1.addEventListener('input', updateTotal);
-  input2.addEventListener('input', updateTotal);
-  input3.addEventListener('input', updateTotal);
-
-  // Add event listeners to prevent negative input
-  input1.addEventListener('input', preventNegativeInput);
-  input2.addEventListener('input', preventNegativeInput);
-  input3.addEventListener('input', preventNegativeInput);
+        if (total > 10) {
+            totalText1.textContent = 'Llevas demasiados stickers';
+            totalStickersSpan.textContent = '';
+            totalText2.textContent = '';
+        } else {
+            totalText1.textContent = 'Llevas un total de';
+            totalStickersSpan.textContent = total;
+            totalText2.textContent = 'stickers.';
+        }
+    }
 });
+
 
 
 
 //Pregunta 3
 
 document.getElementById('btn').addEventListener('click', function() {
-    // Get the values of the selected options
     const select1 = document.getElementById('select1').value;
     const select2 = document.getElementById('select2').value;
     const select3 = document.getElementById('select3').value;
 
-    // Concatenate the values to form the three-digit number
     const selectedNumber = select1 + select2 + select3;
 
-  // Get the result element
     const msg = document.getElementById('msg');
 
-    // Check if the numbers meet the specified conditions
     if (selectedNumber === '911') {
         msg.innerHTML = 'password 1 correcto';
         } else if (selectedNumber === '714') {

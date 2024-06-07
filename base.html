@@ -10,15 +10,13 @@
 </head>
 
 <body>
-    <h2>Pregunta 1</h2>
     <section id="pregunta_1">
-        <section>
-            <div id="container_1" class="red_border">
-                <img src="/assets/Miro-Logo.png" alt=""> 
-            </div>
-        </section>
+    <h2 id="title">Pregunta 1</h2>
+        <div id="container_1" class="red_border">
+            <img src="/assets/Miro-Logo.png" alt=""> 
+        </div>
     </section>
-    <h2>Pregunta 2</h2>
+    <h2 id="title">Pregunta 2</h2>
     <section id="pregunta_2">
         <section id="box">
             <div class="img-card">
@@ -29,7 +27,7 @@
             </div>
             <div>
                 <p>Cantidad:
-                    <span id="quantity_1"><input type="integer"></span>
+                    <span id="quantity_1"><input type="number" min="0" value="0"></span>
                 </p>
             </div>
         </section>
@@ -42,7 +40,7 @@
             </div>
             <div>
                 <p>Cantidad:
-                    <span id="quantity_2"><input type="integer"></span>
+                    <span id="quantity_2"><input type="number" min="0" value="0"></span>
                 </p>
             </div>
         </section>
@@ -55,56 +53,56 @@
             </div>
             <div>
                 <p>Cantidad:
-                    <span id="quantity_3"><input type="integer"></span>
+                    <span id="quantity_3"><input type="number" min="0" value="0"></span>
                 </p>
             </div>
         </section>
     </section>
     <section id="total">
-        <h4>Llevas un total de</h4>
-        <p><span id="total_stickers"></span></p>
-        <h4>stickers.</h4>
+        <h4 id="total_text_1">Llevas un total de</h4>
+        <p><span id="total_stickers">0</span></p>
+        <h4 id="total_text_2">stickers.</h4>
     </section>
-    <h2>Pregunta 3</h2>
+    
     <section id="pregunta_3">
-        <select id="select1">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-        </select>
-        <select id="select2">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-        </select>
-        <select id="select3">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-        </select>
-
-        <button id="btn">Ingresar</button>
-
-        <p id="msg"></p>
-
+    <h2 id="title">Pregunta 3</h2>
+        <div id="pass_area">
+            <select id="select1">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+            <select id="select2">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+            <select id="select3">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+            <button id="btn">Ingresar</button>
+            <p id="msg"></p>
+        </div>
     </section>
 
     <script src="/index.js">
