@@ -1,11 +1,24 @@
 //Pregunta 1
 
+// document.addEventListener('DOMContentLoaded', (event) => {
+//     const image = document.querySelector('#container_1 img');
+
+//     image.addEventListener('click', () => {
+//         const container = document.getElementById('container_1');
+//         container.classList.toggle('red_border');
+//     });
+// });
+
 document.addEventListener('DOMContentLoaded', (event) => {
     const image = document.querySelector('#container_1 img');
 
     image.addEventListener('click', () => {
         const container = document.getElementById('container_1');
-        container.classList.toggle('red_border');
+        if (container.classList.contains('red_border')) {
+            container.classList.remove('red_border');
+        } else {
+            container.classList.add('red_border');
+        }
     });
 });
 
