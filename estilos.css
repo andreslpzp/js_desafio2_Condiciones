@@ -16,6 +16,10 @@ body {
 #pregunta_1{
     background-color: rgb(241, 247, 218);
     height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #pregunta_1 h2{
@@ -25,7 +29,9 @@ body {
 #container_1{
     width: fit-content;
     height: fit-content;
-    margin-left: 230px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
 #container_1 img{
@@ -68,7 +74,7 @@ body {
 
 #total{
     text-align: center;
-    margin: 1rem 20rem;
+    margin: 1rem 35rem;
     padding: 1rem;
     background-color: rgb(168, 205, 231);
     border-radius: 10%;
